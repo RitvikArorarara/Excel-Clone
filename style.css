@@ -1,75 +1,95 @@
-*{
+* {
     box-sizing: border-box;
-}
-body{
+  }
+  
+  body {
     margin: 0;
     font-family: "Montserrat", sans-serif;
-}
-.container{
+  }
+  
+  .container {
     height: 100vh;
-}
-.title-section{
+  }
+  
+  .title-section {
+    outline: none;
     height: 4%;
     background-color: #27ae60;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    outline: none;
-}
-.menu-section{
+  }
+  
+  .menu-bar-section {
     height: 4%;
     background-color: white;
     display: flex;
     align-items: center;
-}
-
-.menu-section div{
+  }
+  
+  .menu-bar-section div {
     margin-left: 20px;
     color: black;
-}
-.menu-options-section{
+  }
+  
+  .menu-options-section {
     height: 8%;
     background-color: #2ecc71;
-}
-.formula-section{
+  }
+  
+  .formula-section {
     height: 4%;
     display: flex;
-}
-.formula-section .selected-cell-div{
+  }
+  
+  .formula-section .selected-cell-div {
     height: 100%;
     width: 20%;
-    border: 1px solid;
     display: flex;
     justify-content: center;
+    background-color: white;
+    border: 1px solid;
     align-items: center;
-}
-
-.formula-section input{
+  }
+  
+  .formula-section input {
     display: block;
     width: 80%;
     height: 100%;
     border: 1px solid;
     outline: none;
-}
-.grid{
+  }
+  
+  .grid {
     height: 76%;
     overflow: auto;
-}
-
-.sheets-section{
+    position: relative;
+  }
+  
+  .sheets-section {
     height: 4%;
     background-color: #2ecc71;
-}
-.blank-corner-section{
+  }
+  
+  .blank-corner {
     height: 30px;
     width: 30px;
     background-color: gray;
     position: fixed;
     top: 20vh;
     left: 0;
-}
-.row-number{
+  }
+  
+  .row-number-section {
+    display: inline-block;
+    position: fixed;
+    top: calc(20vh + 30px);
+    left: 0;
+    z-index: -10;
+  }
+  
+  .row-number {
     height: 30px;
     width: 30px;
     background-color: #27ae60;
@@ -79,22 +99,19 @@ body{
     align-items: center;
     border: none;
     border-bottom: 1px solid;
-}
-.row-number-section{
-    display: inline-block;
-    position: fixed;
-    top: calc(20vh + 30px);
-    left: 0;
-}
-.column-tag-section{
+  }
+  
+  .column-tag-section {
     height: 30px;
     position: fixed;
-    background-color: bisque;
+    background: bisque;
     top: 20vh;
     left: 30px;
     display: flex;
-}
-.column-tag{
+    z-index: -10;
+  }
+  
+  .column-tag {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,17 +122,30 @@ body{
     border: none;
     border-right: 1px solid;
     color: white;
-}
-.cell{
+  }
+  
+  .cell-section {
+    height: calc(76vh - 30px);
+    width: calc(100vw - 30px);
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    overflow: auto;
+  }
+  
+  
+  .cell{
     width: 80px;
     height: 30px;
     border: 1px solid;
     flex-shrink: 0;
     outline: none;
-}
-.cell-selected{
-    border: 2px solid;
-}
-.row{
+  }
+  
+  .cell-selected{
+    border: 2px solid rgb(60, 60, 218);
+  }
+  
+  .row{
     display: flex;
-}
+  }
