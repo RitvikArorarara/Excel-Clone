@@ -270,7 +270,6 @@ function updateCell(cell) {
 }
 
 function addToDownstream(parent, child) {
-  // child ko parent ki downstream me add krna hai
 
   dataObj[parent].downstream.push(child);
 }
